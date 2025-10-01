@@ -7,8 +7,9 @@ public class AIOpponent
 			
 			int randomRow =  (int)(Math.random()*3);
 			int randomCol =  (int)(Math.random()*3);
-			Board.board[randomRow][randomCol] = "O";
 			
-				
+			// if space is blank
+			Board.board[randomRow][randomCol] = "O";
+			// else call aimove again
 		}
 	}
