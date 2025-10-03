@@ -5,14 +5,29 @@ public class PlayGame
 				Board.prepareBoard();
 				Board.displayBoard();
 				boolean stillPlaying = true;
+				int moveCounter = 0;
 				while (stillPlaying) 
 					{
+					
 					Player.askForMove();
 					Board.isWonGame();
 					Board.displayBoard();
-					AIOpponent.aiMove();
-					Board.displayBoard();
-					Board.isWonGame();
+					moveCounter++;
+					
+					if (moveCounter != 5)
+						{
+							AIOpponent.aiMove();
+							Board.isWonGame();
+							Board.displayBoard();
+							
+						}
+					else 
+						{
+							stillPlaying = false;
+							
+						}
+					
+					
 
 					}
 			}

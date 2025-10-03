@@ -36,6 +36,7 @@ public class Board
 				(board[0][0].equals(board[1][1]) && board[1][1].equals(board[2][2]) && !board[1][1].equals(" ")) ||
 				(board[0][2].equals(board[1][1]) && board[1][1].equals(board[2][0]) && !board[1][1].equals(" ")))
 				{
+				Board.displayBoard();
 				System.out.println("The game is over!");
 				System.exit(0);
 				}
